@@ -8,22 +8,7 @@ positionsOfCube = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
 representationOfCube = [['W0', 0], ['W1', 1], ['W2', 2], ['W3', 3], ['W4', 4], ['W5', 5], ['W6', 6], ['W7', 7], ['B0', 8], ['B1', 9], ['B2', 10], ['B3', 11], ['B4', 12], ['B5', 13], ['B6', 14], ['B7', 15], ['R0', 16], ['R1', 17], ['R2', 18], ['R3', 19], ['R4', 20], ['R5', 21], ['R6', 22], ['R7', 23], ['G0', 24], ['G1', 25], ['G2', 26], ['G3', 27], ['G4', 28], ['G5', 29], ['G6', 30], ['G7', 31], ['O0', 32], ['O1', 33], ['O2', 34], ['O3', 35], ['O4', 36], ['O5', 37], ['O6', 38], ['O7', 39], ['Y0', 40], ['Y1', 41], ['Y2', 42], ['Y3', 43], ['Y4', 44], ['Y5', 45], ['Y6', 46], ['Y7', 47]]
 
 
-'''
-lst = []
-for i in range(48):
-    lst.append([coloursOfCube[i], positionsOfCube[i]])
-print(lst)
 
-#drawing the cube
-lst = ['Y', 'R', 'V', 'B', 'G','O']
-
-lst1 = []
-for j, el in enumerate(lst):
-    for i in range(10):
-        lst1.append(el+str(i))
-
-print(lst1)
-'''
 
 # I want to be able to scale to any sizes
 cubeSideSize = 3
@@ -103,7 +88,7 @@ class Cube():
 
 cube = Cube()
 
-cube.R()
+cube.Ri()
 
 cube.visualise()
 
