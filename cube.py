@@ -28,10 +28,8 @@ moveableTilesPerSide = 8
 deltaInner = 2
 
 
-class Cube():
+class makeACube():
     def __init__(self):
-        #self.colours = coloursOfCube
-        #self.positions = positionsOfCube
         self.cube = coloursOfCube
 
     def shuffle(self):
@@ -112,7 +110,7 @@ class Cube():
                   self.cube[i * moveableTilesPerSide + 4])
 
 
-class Moves(Cube):
+class Cube(makeACube):
     def R(self):
         # skriv in sides counter clockwise.
         # sides = vilka sidorm skriv in det i tvärtom ordning
@@ -204,12 +202,11 @@ class Moves(Cube):
 
 
 
-# cube = Cube()
+#cube = Moves()
+#cube.R()
 
-cube = Moves()
-cube.R()
 
-cube.visualise()
+#cube.visualise()
 
 '''
 
