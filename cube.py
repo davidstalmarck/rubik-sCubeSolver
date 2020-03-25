@@ -5,9 +5,9 @@ import random
 
 colourMiddle = ['W', 'B', 'R', 'G', 'O', 'Y']
 
-coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'R0',
-                 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'O0', 'O1',
-                 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7']
+coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'R0',
+                 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'O0', 'O1',
+                 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7', 'Y8']
 
 '''
 positionsOfCube = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
@@ -23,8 +23,8 @@ representationOfCube = [['W0', 0], ['W1', 1], ['W2', 2], ['W3', 3], ['W4', 4], [
 # I want to be able to scale to any sizes
 cubeSideSize = 3
 sidesAffectedByEachMove = 4
-totalPositions = 48
-moveableTilesPerSide = 8
+totalPositions = 54
+moveableTilesPerSide = 9
 deltaInner = 2
 
 
@@ -104,7 +104,7 @@ class makeACube():
             print('--------------------------------------------')
             print(self.cube[i * moveableTilesPerSide + 0], self.cube[i * moveableTilesPerSide + 1],
                   self.cube[i * moveableTilesPerSide + 2])
-            print(self.cube[i * moveableTilesPerSide + 7], str(colourMiddle[i]) + '-middle',
+            print(self.cube[i * moveableTilesPerSide + 7], self.cube[i * moveableTilesPerSide + 8],
                   self.cube[i * moveableTilesPerSide + 3])
             print(self.cube[i * moveableTilesPerSide + 6], self.cube[i * moveableTilesPerSide + 5],
                   self.cube[i * moveableTilesPerSide + 4])
@@ -203,10 +203,11 @@ class Cube(makeACube):
 
 
 #cube = Moves()
+cube = Cube()
 #cube.R()
 
 
-#cube.visualise()
+cube.visualise()
 
 '''
 
