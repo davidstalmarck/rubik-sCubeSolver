@@ -53,7 +53,7 @@ class makeACube():
                 tile = (tile + 1) % moveableTilesPerSide
 
     def swapOuterPositions(self, sides, move):
-        # sides is a list, and says which sides is affeckted. Move is a constant depending on which move
+        # sides is a list, and says which sides is affected. Move is a constant depending on which move
         # first I take the last elements and make them ready to be moved
 
         waiting_to_be_moved = []
