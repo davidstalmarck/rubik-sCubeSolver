@@ -241,7 +241,7 @@ class Cube(makeACube):
 
 #cube = Moves()
 cube = Cube()
-#cube.R()
+cube.R()
 
 
 cube.visualise()
@@ -260,4 +260,15 @@ cube.visualise()
                     if len(local)==3:
                         print(local)
 
+'''
+
+#experiment med färger (misslyckat)
+'''
+print("colour test")
+print("\u001b[47m white")
+print("\u001b[44m blue")
+print("\u001b[41m red")
+print("\u001b[42m green")
+print("\u001b[45m orange")
+print("\u001b[43m yellow")
 '''
