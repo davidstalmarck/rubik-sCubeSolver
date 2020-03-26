@@ -4,6 +4,7 @@ from tkinter import *
 #hej test
 # sidornas numrering är white = W = 0 aka grey, blue = B = 1, red = R = 2, green = G = 3, orange = O = 4, yellow = Y = 5
 
+
 window = Tk()
 
 coloursMiddleLabel = {'W': Label(window, width="3", height="3", bg="grey"),
@@ -406,10 +407,49 @@ class Cube(makeACube):
 
 # cube.drawWithTkinter()
 cube = Cube()
+
+# test 1 för att se att vår kod är fuckad: R-U ger fel ordning på högersidan
+# om du har röd mot dig och gul uppåt och kollar på högersidan borde den bli:
+# Gu-Or-Or
+# Gr-Gr-Gr
+# Gr-Gr-GR
+# men det blir:
+# Or-Or-Gu
+# Gr-Gr-Gr
+# Gr-Gr-GR
+'''
 cube.R()
 cube.U()
-#cube.Ri()
-#cube.Ui()
+'''
+
+# test 2 för att se att vår kod är fuckad: R-U-Ri-Ui x 6 borde komma tillbaka till ursprungsläget, men gör inte det
+'''
+cube.R()
+cube.U()
+cube.Ri()
+cube.Ui()
+cube.R()
+cube.U()
+cube.Ri()
+cube.Ui()
+cube.R()
+cube.U()
+cube.Ri()
+cube.Ui()
+cube.R()
+cube.U()
+cube.Ri()
+cube.Ui()
+cube.R()
+cube.U()
+cube.Ri()
+cube.Ui()
+cube.R()
+cube.U()
+cube.Ri()
+cube.Ui()
+# '''
+
 
 cube.alternativetkinter()
 
