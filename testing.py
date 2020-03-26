@@ -1,4 +1,7 @@
 '''
+
+
+
 lst = []
 for i in range(48):
     lst.append([coloursOfCube[i], positionsOfCube[i]])
@@ -13,7 +16,7 @@ for j, el in enumerate(lst):
         lst1.append(el+str(i))
 
 print(lst1)
-'''
+
 
 dictColours = {'W0': Label(window, width="5", height="5", bg="white"),
                'W1': Label(window, width="5", height="5", bg="white"),
@@ -63,3 +66,4 @@ dictColours = {'W0': Label(window, width="5", height="5", bg="white"),
                'Y5': Label(window, width="5", height="5", bg="Yellow"),
                'Y6': Label(window, width="5", height="5", bg="Yellow"),
                'Y7': Label(window, width="5", height="5", bg="Yellow")}
+'''
