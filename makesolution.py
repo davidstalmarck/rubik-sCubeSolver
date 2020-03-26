@@ -1,12 +1,15 @@
+from tkinter import *
 from cube import Cube
 
-cube = Cube()
+class Algorithm(Cube):
+    def nada(self):
+        pass
 
+cube = Algorithm()
 
+cube.R()
 
-cube.U()
-
-cube.visualise()
+cube.drawWithTkinter()
 
 
 
