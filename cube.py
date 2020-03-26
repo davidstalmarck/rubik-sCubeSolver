@@ -156,7 +156,7 @@ class makeACube():
                 twoStepsBehind = oneStepBehind
                 oneStepBehind = _
 
-    def visualise(self):
+    def visualisefelix(self):
         # lager 1
         i = 5
         print('-----------------------------------------')
@@ -365,7 +365,7 @@ cube = Cube()
 cube.R()
 
 
-cube.visualise()
+cube.visualisefelix()
 
 '''
 

@@ -177,6 +177,63 @@ class makeACube():
             self.colours[self.cube[i * moveableTilesPerSide + 5]].grid(row=i * 3 + 2, column=1)
             self.colours[self.cube[i * moveableTilesPerSide + 4]].grid(row=i * 3 + 2, column=2)
 
+    def alternativetkinter(self):
+        # lager 1
+        i = 5
+
+        # lager 2
+        for i in range(1, 5)
+
+        # lager 3
+        i = 0
+
+    def visualisefelix(self):
+        # lager 1
+        i = 5
+        print('-----------------------------------------')
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 0], self.cube[i * moveableTilesPerSide + 1],
+                self.cube[i * moveableTilesPerSide + 2], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 7], self.cube[i * moveableTilesPerSide + 8],
+                self.cube[i * moveableTilesPerSide + 3], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 6], self.cube[i * moveableTilesPerSide + 5],
+                self.cube[i * moveableTilesPerSide + 4], "| -- -- -- | -- -- --")
+        print('-----------------------------------------')
+        # lager 2
+        string = ""
+        for i in range(1, 5):
+            for j in range(3):
+                string += str(self.cube[i * moveableTilesPerSide + j]) + " "
+            if i != 4:
+                string += "| "
+        print(string)
+        string = ""
+        for i in range(1, 5):
+            for j in [7, "middle", 3]:
+                if j == "middle":
+                    string += str(self.cube[48 + i]) + " "
+                    continue
+                string += str(self.cube[i * moveableTilesPerSide + j]) + " "
+            if i != 4:
+                string += "| "
+        print(string)
+        string = ""
+        for i in range(1, 5):
+            for j in reversed(range(4, 7)):
+                string += str(self.cube[i * moveableTilesPerSide + j]) + " "
+            if i != 4:
+                string += "| "
+        print(string)
+        # lager 3
+        i = 0
+        print('-----------------------------------------')
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 0], self.cube[i * moveableTilesPerSide + 1],
+                self.cube[i * moveableTilesPerSide + 2], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 7], self.cube[i * moveableTilesPerSide + 8],
+                self.cube[i * moveableTilesPerSide + 3], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 6], self.cube[i * moveableTilesPerSide + 5],
+                self.cube[i * moveableTilesPerSide + 4], "| -- -- -- | -- -- --")
+        print('-----------------------------------------')
+
 
 class Cube(makeACube):
 
