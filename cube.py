@@ -14,7 +14,7 @@ coloursMiddleLabel = {'W': Label(window, width="3", height="3", bg="grey"),
 
 colourMiddle = ['W', 'B', 'R', 'G', 'O', 'Y']
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # c = {'W0', Label(window, width="5", height="5", bg="white"), 'W1', Label(window, width="5", height="5", bg="white"), 'W2', Label(window, width="5", height="5", bg="white"), 'W3', Label(window, width="5", height="5", bg="white"), 'W4', Label(window, width="5", height="5", bg="white"), 'W5', Label(window, width="5", height="5", bg="white"), 'W6', Label(window, width="5", height="5",bg = "blue"), 'W7', Label(window, width="5", height="5",bg = "blue"), 'B0', Label(window, width="5", height="5",bg = "blue"), 'B1', Label(window, width="5", height="5",bg = "blue"), 'B2', Label(window, width="5", height="5",bg = "blue"), 'B3', Label(window, width="5", height="5",bg = "blue"), 'B4', Label(window, width="5", height="5",bg = "red"), 'B5', Label(window, width="5", height="5",bg = "red"), 'B6', Label(window, width="5", height="5",bg = "red"), 'B7', Label(window, width="5", height="5",bg = "red"), 'R0', Label(window, width="5", height="5",bg = "red"), 'R1', Label(window, width="5", height="5",bg = "red"), 'R2', Label(window, width="5", height="5",bg = "green"), 'R3', Label(window, width="5", height="5",bg = "green"), 'R4', Label(window, width="5", height="5",bg = "green"), 'R5', Label(window, width="5", height="5",bg = "green"), 'R6', Label(window, width="5", height="5",bg = "green"), 'R7', Label(window, width="5", height="5",bg = "green"), 'G0', Label(window, width="5", height="5",bg = "Orange"), 'G1', Label(window, width="5", height="5",bg = "Orange"), 'G2', Label(window, width="5", height="5",bg = "Orange"), ('G3', 'Label(window, width="5", height="5",bg = "Orange")'), ('G4', 'Label(window, width="5", height="5",bg = "Orange")'), ('G5', 'Label(window, width="5", height="5",bg = "Orange")'), ('G6', 'Label(window, width="5", height="5",bg = "Yellow")'), ('G7', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O0', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O1', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O2', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O3', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O4', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O5', 'Label(window, width="5", height="5",bg = "Yellow")')])}
 
 
@@ -71,11 +71,11 @@ dictColours = {'W0': Label(window, width="1", height="1", bg="grey"),
 coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'R0',
                  'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'O0', 'O1',
                  'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7']
-=======
+
 coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'R0',
                  'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'O0', 'O1',
                  'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7', 'Y8']
->>>>>>> adebec253b1744cf48b68eaab359bac40bc0a3a0
+#>>>>>>> adebec253b1744cf48b68eaab359bac40bc0a3a0
 
 # I want to be able to scale to any sizes
 cubeSideSize = 3
@@ -118,8 +118,7 @@ class makeACube():
         waiting_to_be_moved = []
 
         for tile in range(cubeSideSize):
-            waiting_to_be_moved.append(
-                self.cube[sides[-1] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide])
+            waiting_to_be_moved.append(self.cube[sides[-1] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide])
 
         # now I start moving the bricks
 
