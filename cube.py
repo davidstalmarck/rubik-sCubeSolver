@@ -286,6 +286,10 @@ cube = Cube()
 
 cube.R()
 
+cube.L()
+
+cube.U()
+
 cube.drawWithTkinter()
 
 window.mainloop()
