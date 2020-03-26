@@ -14,6 +14,7 @@ coloursMiddleLabel = {'W': Label(window, width="3", height="3", bg="grey"),
 
 colourMiddle = ['W', 'B', 'R', 'G', 'O', 'Y']
 
+<<<<<<< HEAD
 # c = {'W0', Label(window, width="5", height="5", bg="white"), 'W1', Label(window, width="5", height="5", bg="white"), 'W2', Label(window, width="5", height="5", bg="white"), 'W3', Label(window, width="5", height="5", bg="white"), 'W4', Label(window, width="5", height="5", bg="white"), 'W5', Label(window, width="5", height="5", bg="white"), 'W6', Label(window, width="5", height="5",bg = "blue"), 'W7', Label(window, width="5", height="5",bg = "blue"), 'B0', Label(window, width="5", height="5",bg = "blue"), 'B1', Label(window, width="5", height="5",bg = "blue"), 'B2', Label(window, width="5", height="5",bg = "blue"), 'B3', Label(window, width="5", height="5",bg = "blue"), 'B4', Label(window, width="5", height="5",bg = "red"), 'B5', Label(window, width="5", height="5",bg = "red"), 'B6', Label(window, width="5", height="5",bg = "red"), 'B7', Label(window, width="5", height="5",bg = "red"), 'R0', Label(window, width="5", height="5",bg = "red"), 'R1', Label(window, width="5", height="5",bg = "red"), 'R2', Label(window, width="5", height="5",bg = "green"), 'R3', Label(window, width="5", height="5",bg = "green"), 'R4', Label(window, width="5", height="5",bg = "green"), 'R5', Label(window, width="5", height="5",bg = "green"), 'R6', Label(window, width="5", height="5",bg = "green"), 'R7', Label(window, width="5", height="5",bg = "green"), 'G0', Label(window, width="5", height="5",bg = "Orange"), 'G1', Label(window, width="5", height="5",bg = "Orange"), 'G2', Label(window, width="5", height="5",bg = "Orange"), ('G3', 'Label(window, width="5", height="5",bg = "Orange")'), ('G4', 'Label(window, width="5", height="5",bg = "Orange")'), ('G5', 'Label(window, width="5", height="5",bg = "Orange")'), ('G6', 'Label(window, width="5", height="5",bg = "Yellow")'), ('G7', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O0', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O1', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O2', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O3', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O4', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O5', 'Label(window, width="5", height="5",bg = "Yellow")')])}
 
 
@@ -70,12 +71,17 @@ dictColours = {'W0': Label(window, width="1", height="1", bg="grey"),
 coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'R0',
                  'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'O0', 'O1',
                  'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7']
+=======
+coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'R0',
+                 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'O0', 'O1',
+                 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7', 'Y8']
+>>>>>>> adebec253b1744cf48b68eaab359bac40bc0a3a0
 
 # I want to be able to scale to any sizes
 cubeSideSize = 3
 sidesAffectedByEachMove = 4
-totalPositions = 48
-moveableTilesPerSide = 8
+totalPositions = 54
+moveableTilesPerSide = 9
 deltaInner = 2
 
 
@@ -106,7 +112,7 @@ class makeACube():
                 tile = (tile + 1) % moveableTilesPerSide
 
     def swapOuterPositions(self, sides, move):
-        # sides is a list, and says which sides is affeckted. Move is a constant depending on which move
+        # sides is a list, and says which sides is affected. Move is a constant depending on which move
         # first I take the last elements and make them ready to be moved
 
         waiting_to_be_moved = []
@@ -153,14 +159,51 @@ class makeACube():
                 oneStepBehind = _
 
     def visualise(self):
-        for i in range(6):
-            print('--------------------------------------------')
-            print(self.cube[i * moveableTilesPerSide + 0], self.cube[i * moveableTilesPerSide + 1],
-                  self.cube[i * moveableTilesPerSide + 2])
-            print(self.cube[i * moveableTilesPerSide + 7], str(colourMiddle[i]) + '-middle',
-                  self.cube[i * moveableTilesPerSide + 3])
-            print(self.cube[i * moveableTilesPerSide + 6], self.cube[i * moveableTilesPerSide + 5],
-                  self.cube[i * moveableTilesPerSide + 4])
+        # lager 1
+        i = 5
+        print('-----------------------------------------')
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 0], self.cube[i * moveableTilesPerSide + 1],
+                self.cube[i * moveableTilesPerSide + 2], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 7], self.cube[i * moveableTilesPerSide + 8],
+                self.cube[i * moveableTilesPerSide + 3], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 6], self.cube[i * moveableTilesPerSide + 5],
+                self.cube[i * moveableTilesPerSide + 4], "| -- -- -- | -- -- --")
+        print('-----------------------------------------')
+        # lager 2
+        string = ""
+        for i in range(1, 5):
+            for j in range(3):
+                string += str(self.cube[i * moveableTilesPerSide + j]) + " "
+            if i != 4:
+                string += "| "
+        print(string)
+        string = ""
+        for i in range(1, 5):
+            for j in [7, "middle", 3]:
+                if j == "middle":
+                    string += str(self.cube[48 + i]) + " "
+                    continue
+                string += str(self.cube[i * moveableTilesPerSide + j]) + " "
+            if i != 4:
+                string += "| "
+        print(string)
+        string = ""
+        for i in range(1, 5):
+            for j in reversed(range(4, 7)):
+                string += str(self.cube[i * moveableTilesPerSide + j]) + " "
+            if i != 4:
+                string += "| "
+        print(string)
+        # lager 3
+        i = 0
+        print('-----------------------------------------')
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 0], self.cube[i * moveableTilesPerSide + 1],
+                self.cube[i * moveableTilesPerSide + 2], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 7], self.cube[i * moveableTilesPerSide + 8],
+                self.cube[i * moveableTilesPerSide + 3], "| -- -- -- | -- -- --")
+        print("-- -- -- |", self.cube[i * moveableTilesPerSide + 6], self.cube[i * moveableTilesPerSide + 5],
+                self.cube[i * moveableTilesPerSide + 4], "| -- -- -- | -- -- --")
+        print('-----------------------------------------')
 
     def drawWithTkinter(self):
         for i in range(6):
@@ -319,11 +362,20 @@ representationOfCube = [['W0', 0], ['W1', 1], ['W2', 2], ['W3', 3], ['W4', 4], [
                         ['Y0', 40], ['Y1', 41], ['Y2', 42], ['Y3', 43], ['Y4', 44], ['Y5', 45], ['Y6', 46], ['Y7', 47]]
 '''
 
+<<<<<<< HEAD
 # cube = Moves()
 # cube.R()
 
 
 # cube.visualise()
+=======
+#cube = Moves()
+cube = Cube()
+cube.R()
+
+
+cube.visualise()
+>>>>>>> adebec253b1744cf48b68eaab359bac40bc0a3a0
 
 '''
 
@@ -339,4 +391,15 @@ representationOfCube = [['W0', 0], ['W1', 1], ['W2', 2], ['W3', 3], ['W4', 4], [
                     if len(local)==3:
                         print(local)
 
+'''
+
+#experiment med färger (misslyckat)
+'''
+print("colour test")
+print("\u001b[47m white")
+print("\u001b[44m blue")
+print("\u001b[41m red")
+print("\u001b[42m green")
+print("\u001b[45m orange")
+print("\u001b[43m yellow")
 '''
