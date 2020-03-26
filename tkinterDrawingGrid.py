@@ -1,6 +1,7 @@
 import random
 from tkinter import *
 
+#hej test
 # sidornas numrering är white = W = 0 aka grey, blue = B = 1, red = R = 2, green = G = 3, orange = O = 4, yellow = Y = 5
 
 window = Tk()
