@@ -18,65 +18,71 @@ colourMiddle = ['W', 'B', 'R', 'G', 'O', 'Y']
 # c = {'W0', Label(window, width="5", height="5", bg="white"), 'W1', Label(window, width="5", height="5", bg="white"), 'W2', Label(window, width="5", height="5", bg="white"), 'W3', Label(window, width="5", height="5", bg="white"), 'W4', Label(window, width="5", height="5", bg="white"), 'W5', Label(window, width="5", height="5", bg="white"), 'W6', Label(window, width="5", height="5",bg = "blue"), 'W7', Label(window, width="5", height="5",bg = "blue"), 'B0', Label(window, width="5", height="5",bg = "blue"), 'B1', Label(window, width="5", height="5",bg = "blue"), 'B2', Label(window, width="5", height="5",bg = "blue"), 'B3', Label(window, width="5", height="5",bg = "blue"), 'B4', Label(window, width="5", height="5",bg = "red"), 'B5', Label(window, width="5", height="5",bg = "red"), 'B6', Label(window, width="5", height="5",bg = "red"), 'B7', Label(window, width="5", height="5",bg = "red"), 'R0', Label(window, width="5", height="5",bg = "red"), 'R1', Label(window, width="5", height="5",bg = "red"), 'R2', Label(window, width="5", height="5",bg = "green"), 'R3', Label(window, width="5", height="5",bg = "green"), 'R4', Label(window, width="5", height="5",bg = "green"), 'R5', Label(window, width="5", height="5",bg = "green"), 'R6', Label(window, width="5", height="5",bg = "green"), 'R7', Label(window, width="5", height="5",bg = "green"), 'G0', Label(window, width="5", height="5",bg = "Orange"), 'G1', Label(window, width="5", height="5",bg = "Orange"), 'G2', Label(window, width="5", height="5",bg = "Orange"), ('G3', 'Label(window, width="5", height="5",bg = "Orange")'), ('G4', 'Label(window, width="5", height="5",bg = "Orange")'), ('G5', 'Label(window, width="5", height="5",bg = "Orange")'), ('G6', 'Label(window, width="5", height="5",bg = "Yellow")'), ('G7', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O0', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O1', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O2', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O3', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O4', 'Label(window, width="5", height="5",bg = "Yellow")'), ('O5', 'Label(window, width="5", height="5",bg = "Yellow")')])}
 
 
-dictColours = {'W0': Label(window, width="1", height="1", bg="grey"),
-               'W1': Label(window, width="1", height="1", bg="grey"),
-               'W2': Label(window, width="1", height="1", bg="grey"),
-               'W3': Label(window, width="1", height="1", bg="grey"),
-               'W4': Label(window, width="1", height="1", bg="grey"),
-               'W5': Label(window, width="1", height="1", bg="grey"),
-               'W6': Label(window, width="1", height="1", bg="grey"),
-               'W7': Label(window, width="1", height="1", bg="grey"),
-               'B0': Label(window, width="1", height="1", bg="blue"),
-               'B1': Label(window, width="1", height="1", bg="blue"),
-               'B2': Label(window, width="1", height="1", bg="blue"),
-               'B3': Label(window, width="1", height="1", bg="blue"),
-               'B4': Label(window, width="1", height="1", bg="blue"),
-               'B5': Label(window, width="1", height="1", bg="blue"),
-               'B6': Label(window, width="1", height="1", bg="blue"),
-               'B7': Label(window, width="1", height="1", bg="blue"),
-               'R0': Label(window, width="1", height="1", bg="red"),
-               'R1': Label(window, width="1", height="1", bg="red"),
-               'R2': Label(window, width="1", height="1", bg="red"),
-               'R3': Label(window, width="1", height="1", bg="red"),
-               'R4': Label(window, width="1", height="1", bg="red"),
-               'R5': Label(window, width="1", height="1", bg="red"),
-               'R6': Label(window, width="1", height="1", bg="red"),
-               'R7': Label(window, width="1", height="1", bg="red"),
-               'G0': Label(window, width="1", height="1", bg="green"),
-               'G1': Label(window, width="1", height="1", bg="green"),
-               'G2': Label(window, width="1", height="1", bg="green"),
-               'G3': Label(window, width="1", height="1", bg="green"),
-               'G4': Label(window, width="1", height="1", bg="green"),
-               'G5': Label(window, width="1", height="1", bg="green"),
-               'G6': Label(window, width="1", height="1", bg="green"),
-               'G7': Label(window, width="1", height="1", bg="green"),
-               'O0': Label(window, width="1", height="1", bg="Orange"),
-               'O1': Label(window, width="1", height="1", bg="Orange"),
-               'O2': Label(window, width="1", height="1", bg="Orange"),
-               'O3': Label(window, width="1", height="1", bg="Orange"),
-               'O4': Label(window, width="1", height="1", bg="Orange"),
-               'O5': Label(window, width="1", height="1", bg="Orange"),
-               'O6': Label(window, width="1", height="1", bg="Orange"),
-               'O7': Label(window, width="1", height="1", bg="Orange"),
-               'Y0': Label(window, width="1", height="1", bg="Yellow"),
-               'Y1': Label(window, width="1", height="1", bg="Yellow"),
-               'Y2': Label(window, width="1", height="1", bg="Yellow"),
-               'Y3': Label(window, width="1", height="1", bg="Yellow"),
-               'Y4': Label(window, width="1", height="1", bg="Yellow"),
-               'Y5': Label(window, width="1", height="1", bg="Yellow"),
-               'Y6': Label(window, width="1", height="1", bg="Yellow"),
-               'Y7': Label(window, width="1", height="1", bg="Yellow")}
+dictColours = {'W0': Label(window, width="2", height="1", bg="grey"),
+               'W1': Label(window, width="2", height="1", bg="grey"),
+               'W2': Label(window, width="2", height="1", bg="grey"),
+               'W3': Label(window, width="2", height="1", bg="grey"),
+               'W4': Label(window, width="2", height="1", bg="grey"),
+               'W5': Label(window, width="2", height="1", bg="grey"),
+               'W6': Label(window, width="2", height="1", bg="grey"),
+               'W7': Label(window, width="2", height="1", bg="grey"),
+               'W8': Label(window, width="2", height="1", bg="grey"),
+               'B0': Label(window, width="2", height="1", bg="blue"),
+               'B1': Label(window, width="2", height="1", bg="blue"),
+               'B2': Label(window, width="2", height="1", bg="blue"),
+               'B3': Label(window, width="2", height="1", bg="blue"),
+               'B4': Label(window, width="2", height="1", bg="blue"),
+               'B5': Label(window, width="2", height="1", bg="blue"),
+               'B6': Label(window, width="2", height="1", bg="blue"),
+               'B7': Label(window, width="2", height="1", bg="blue"),
+               'B8': Label(window, width="2", height="1", bg="blue"),
+               'R0': Label(window, width="2", height="1", bg="red"),
+               'R1': Label(window, width="2", height="1", bg="red"),
+               'R2': Label(window, width="2", height="1", bg="red"),
+               'R3': Label(window, width="2", height="1", bg="red"),
+               'R4': Label(window, width="2", height="1", bg="red"),
+               'R5': Label(window, width="2", height="1", bg="red"),
+               'R6': Label(window, width="2", height="1", bg="red"),
+               'R7': Label(window, width="2", height="1", bg="red"),
+               'R8': Label(window, width="2", height="1", bg="red"),
+               'G0': Label(window, width="2", height="1", bg="green"),
+               'G1': Label(window, width="2", height="1", bg="green"),
+               'G2': Label(window, width="2", height="1", bg="green"),
+               'G3': Label(window, width="2", height="1", bg="green"),
+               'G4': Label(window, width="2", height="1", bg="green"),
+               'G5': Label(window, width="2", height="1", bg="green"),
+               'G6': Label(window, width="2", height="1", bg="green"),
+               'G7': Label(window, width="2", height="1", bg="green"),
+               'G8': Label(window, width="2", height="1", bg="green"),
+               'O0': Label(window, width="2", height="1", bg="Orange"),
+               'O1': Label(window, width="2", height="1", bg="Orange"),
+               'O2': Label(window, width="2", height="1", bg="Orange"),
+               'O3': Label(window, width="2", height="1", bg="Orange"),
+               'O4': Label(window, width="2", height="1", bg="Orange"),
+               'O5': Label(window, width="2", height="1", bg="Orange"),
+               'O6': Label(window, width="2", height="1", bg="Orange"),
+               'O7': Label(window, width="2", height="1", bg="Orange"),
+               'O8': Label(window, width="2", height="1", bg="Orange"),
+               'Y0': Label(window, width="2", height="1", bg="Yellow"),
+               'Y1': Label(window, width="2", height="1", bg="Yellow"),
+               'Y2': Label(window, width="2", height="1", bg="Yellow"),
+               'Y3': Label(window, width="2", height="1", bg="Yellow"),
+               'Y4': Label(window, width="2", height="1", bg="Yellow"),
+               'Y5': Label(window, width="2", height="1", bg="Yellow"),
+               'Y6': Label(window, width="2", height="1", bg="Yellow"),
+               'Y7': Label(window, width="2", height="1", bg="Yellow"),
+               'Y8': Label(window, width="2", height="1", bg="Yellow")}
 
 
-coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'R0',
-                 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'O0', 'O1',
-                 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7']
+coloursOfCube = ['W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'B0', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'R0',
+                 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'G0', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'O0', 'O1',
+                 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'Y0', 'Y1', 'Y2', 'Y3', 'Y4', 'Y5', 'Y6', 'Y7', 'Y8']
 
 # I want to be able to scale to any sizes
 cubeSideSize = 3
 sidesAffectedByEachMove = 4
-totalPositions = 48
-moveableTilesPerSide = 8
+totalPositions = 54
+moveableTilesPerSide = 9
 deltaInner = 2
 
 
@@ -176,16 +182,75 @@ class makeACube():
             self.colours[self.cube[i * moveableTilesPerSide + 6]].grid(row=i * 3 + 2, column=0)
             self.colours[self.cube[i * moveableTilesPerSide + 5]].grid(row=i * 3 + 2, column=1)
             self.colours[self.cube[i * moveableTilesPerSide + 4]].grid(row=i * 3 + 2, column=2)
+    
 
     def alternativetkinter(self):
         # lager 1
-        i = 5
+        r = 0
+        face = 5
+        for col in range(0, 3):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3, column=col)
+        self.colours[self.cube[face * moveableTilesPerSide + 0]].grid(row=r * 3, column=3)
+        self.colours[self.cube[face * moveableTilesPerSide + 1]].grid(row=r * 3, column=4)
+        self.colours[self.cube[face * moveableTilesPerSide + 2]].grid(row=r * 3, column=5)
+        for col in range(6, 12):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3, column=col)
+        # _____________________
+        for col in range(0, 3):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 1, column=col)
+        self.colours[self.cube[face * moveableTilesPerSide + 7]].grid(row=r * 3 + 1, column=3)
+        self.colours[self.cube[face * moveableTilesPerSide + 8]].grid(row=r * 3 + 1, column=4)
+        self.colours[self.cube[face * moveableTilesPerSide + 3]].grid(row=r * 3 + 1, column=5)
+        for col in range(6, 12):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 1, column=col)
+        # _________________________
+        for col in range(0, 3):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 2, column=col)
+        self.colours[self.cube[face * moveableTilesPerSide + 6]].grid(row=r * 3 + 2, column=3)
+        self.colours[self.cube[face * moveableTilesPerSide + 5]].grid(row=r * 3 + 2, column=4)
+        self.colours[self.cube[face * moveableTilesPerSide + 4]].grid(row=r * 3 + 2, column=5)
+        for col in range(6, 12):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 2, column=col)
 
         # lager 2
-        for i in range(1, 5)
+        r = 1
+        for face in range(1, 5):
+            self.colours[self.cube[face * moveableTilesPerSide + 0]].grid(row=r * 3, column=(face-1) * 3 + 0)
+            self.colours[self.cube[face * moveableTilesPerSide + 1]].grid(row=r * 3, column=(face-1) * 3 + 1)
+            self.colours[self.cube[face * moveableTilesPerSide + 2]].grid(row=r * 3, column=(face-1) * 3 + 2)
+            self.colours[self.cube[face * moveableTilesPerSide + 7]].grid(row=r * 3 + 1, column=(face-1) * 3 + 0)
+            self.colours[self.cube[face * moveableTilesPerSide + 8]].grid(row=r * 3 + 1, column=(face-1) * 3 + 1)
+            self.colours[self.cube[face * moveableTilesPerSide + 3]].grid(row=r * 3 + 1, column=(face-1) * 3 + 2)
+            self.colours[self.cube[face * moveableTilesPerSide + 6]].grid(row=r * 3 + 2, column=(face-1) * 3 + 0)
+            self.colours[self.cube[face * moveableTilesPerSide + 5]].grid(row=r * 3 + 2, column=(face-1) * 3 + 1)
+            self.colours[self.cube[face * moveableTilesPerSide + 4]].grid(row=r * 3 + 2, column=(face-1) * 3 + 2)
 
         # lager 3
-        i = 0
+        r = 2
+        face = 0
+        for col in range(0, 3):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3, column=col)
+        self.colours[self.cube[face * moveableTilesPerSide + 0]].grid(row=r * 3, column=3)
+        self.colours[self.cube[face * moveableTilesPerSide + 1]].grid(row=r * 3, column=4)
+        self.colours[self.cube[face * moveableTilesPerSide + 2]].grid(row=r * 3, column=5)
+        for col in range(6, 12):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3, column=col)
+        # _____________________
+        for col in range(0, 3):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 1, column=col)
+        self.colours[self.cube[face * moveableTilesPerSide + 7]].grid(row=r * 3 + 1, column=3)
+        self.colours[self.cube[face * moveableTilesPerSide + 8]].grid(row=r * 3 + 1, column=4)
+        self.colours[self.cube[face * moveableTilesPerSide + 3]].grid(row=r * 3 + 1, column=5)
+        for col in range(6, 12):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 1, column=col)
+        # _________________________
+        for col in range(0, 3):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 2, column=col)
+        self.colours[self.cube[face * moveableTilesPerSide + 6]].grid(row=r * 3 + 2, column=3)
+        self.colours[self.cube[face * moveableTilesPerSide + 5]].grid(row=r * 3 + 2, column=4)
+        self.colours[self.cube[face * moveableTilesPerSide + 4]].grid(row=r * 3 + 2, column=5)
+        for col in range(6, 12):
+            Label(window, width="2", height="1", fg="White", bg="White").grid(row=r * 3 + 2, column=col)
 
     def visualisefelix(self):
         # lager 1
@@ -339,14 +404,26 @@ class Cube(makeACube):
         self.specialCaseswapOuterPositions(sides, start)
         self.swapInnerPositions(side, clockwise)
 
-
+# cube.drawWithTkinter()
 cube = Cube()
-
 cube.R()
+cube.U()
+#cube.Ri()
+#cube.Ui()
 
-cube.drawWithTkinter()
+cube.alternativetkinter()
 
 window.mainloop()
+
+# cube = Cube()
+# window = Tk()
+# cube.alternativetkinter()
+# window.mainloop()
+# for n in range(4):
+#     cube.R()
+#     window = Tk()
+#     cube.alternativetkinter()
+#     window.mainloop()
 
 
 
