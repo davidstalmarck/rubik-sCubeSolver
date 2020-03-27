@@ -120,15 +120,13 @@ class makeACube():
         waiting_to_be_moved = []
 
         for tile in range(cubeSideSize):
-            waiting_to_be_moved.append(
-                self.cube[sides[-1] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide])
+            waiting_to_be_moved.append( self.cube[sides[-1] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide])
 
         # now I start moving the bricks
 
         for i in range(sidesAffectedByEachMove):
             for tile in range(cubeSideSize):
-                newTile, oldTile = waiting_to_be_moved.pop(0), self.cube[
-                    sides[i] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide]
+                newTile, oldTile = waiting_to_be_moved.pop(0), self.cube[sides[i] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide]
                 waiting_to_be_moved.append(oldTile)
 
                 self.cube[sides[i] * moveableTilesPerSide + (move + tile) % moveableTilesPerSide] = newTile
