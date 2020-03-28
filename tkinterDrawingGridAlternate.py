@@ -30,6 +30,7 @@ initialcube = [ 'W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2'
 # from left to right, from top to bottom and from front to back.
 
 # For example the slice involved in a simple R or Ri move is stored in slices["X"][2].
+# rotation names from https://ruwix.com/the-rubiks-cube/notation/
 
 slices = {
     "X" : [
@@ -221,6 +222,8 @@ class Cube():
         for newtileindex, oldtile in zip(newtileindices, oldtiles):
             self.cube[newtileindex] = oldtile
 
+    # standard rotations
+
     def R(self):
         self.rotatesideclockwise(3)
         self.standardpermute(slices["X"][2])
@@ -228,7 +231,15 @@ class Cube():
     def Ri(self):
         self.rotatesidecounterclockwise(3)
         self.reversepermute(slices["X"][2])
+
+    def L(self):
+        self.rotatesideclockwise(1)
+        self.standardpermute(slices["X"][0])
     
+    def Li(self):
+        self.rotatesidecounterclockwise(1)
+        self.reversepermute(slices["X"][0])
+
     def U(self):
         self.rotatesideclockwise(5)
         self.standardpermute(slices["Y"][0])
@@ -237,14 +248,38 @@ class Cube():
         self.rotatesidecounterclockwise(5)
         self.reversepermute(slices["Y"][0])
 
+    def D(self):
+        self.rotatesideclockwise(0)
+        self.standardpermute(slices["Y"][2])
+
+    def Di(self):
+        self.rotatesidecounterclockwise(0)
+        self.reversepermute(slices["Y"][2])
+    
+    def F(self):
+        self.rotatesideclockwise(2)
+        self.standardpermute(slices["Z"][0])
+    
+    def Fi(self):
+        self.rotatesidecounterclockwise(2)
+        self.reversepermute(slices["Z"][0])
+    
+    def B(self):
+        self.rotatesideclockwise(4)
+        self.standardpermute(slices["Z"][2])
+    
+    def Bi(self):
+        self.rotatesidecounterclockwise(4)
+        self.reversepermute(slices["Z"][2])
+
 cube = Cube()
 
-for _ in range(6):
-    cube.R()
-    cube.U()
-    cube.Ri()
-    cube.Ui()
-    
+# for _ in range(6):
+#     cube.R()
+#     cube.U()
+#     cube.Ri()
+#     cube.Ui()
+
 cube.tkinterdraw()
 
 window.mainloop()
