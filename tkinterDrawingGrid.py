@@ -1,5 +1,5 @@
 import random
-from tkinter import *
+from tkinter import Label, Tk, mainloop
 
 #hej test
 # sidornas numrering är white = W = 0 aka grey, blue = B = 1, red = R = 2, green = G = 3, orange = O = 4, yellow = Y = 5
@@ -415,10 +415,10 @@ cube = Cube()
 # Or-Or-Gu
 # Gr-Gr-Gr
 # Gr-Gr-GR
-'''
+
 cube.R()
-cube.U()
-'''
+#cube.U()
+
 
 # test 2 för att se att vår kod är fuckad: R-U-Ri-Ui x 6 borde komma tillbaka till ursprungsläget, men gör inte det
 '''
