@@ -23,13 +23,30 @@ initialcube = [ 'W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2'
 
 # Slices has 3 keys - X, Y and Z - indicating along which axes they lie. Here, we assume one is looking at the cube from the front(side 2)
 # in that case, X-slices rotate around the axis through faces 1 and 3, Y-slices rotate around the axis through faces 0 and 5 and Z-slices,
-# finally, rotate aroung the axis through faces 2 and 4.
+# finally, rotate aroung the axis through faces 2 and 4. In each slice, only the order of the tiles matters, not the actual first item.
+# The convention used is to begin with the numerically lowest face, and then continuing clockwise around the axis
 
-# N
+# Next, each key contains a list of the tiles involved in the 3 possible slices around the axis associated with said key. These are indexed
+# from left to right, from top to bottom and from front to back.
+
+# For example the slice involved in a simple R or Ri move is stored in slices["X"][2].
+
 slices = {
-    "X" : [],
-    "Y" : [],
-    "Z" : []
+    "X" : [
+         [6, 7, 0, 22, 23, 16, 46, 47, 40, 34, 35, 36],
+         [5, 48, 1, 21, 50, 17, 45, 51, 41, 33, 52, 37],
+         [4, 3, 2, 20, 19, 18, 44, 43, 42, 32, 39, 38]
+         ],
+    "Y" : [
+         [10, 9, 8, 34, 33, 32, 26, 25, 24, 18, 17, 16],
+         [11, 49, 15, 35, 52, 39, 27, 51, 31, 19, 50, 23],
+         [12, 13, 14, 36, 37, 38, 28, 29, 30, 20, 21, 22]
+         ],
+    "Z" : [
+         [2, 1, 0, 12, 11, 10, 46, 45, 44, 24, 31, 30],
+         [3, 48, 7, 13, 49, 15, 47, 53, 43, 25, 51, 29],
+         [4, 5, 6, 14, 15, 8, 40, 41, 42, 26, 27, 28]
+         ]
 }
 
 # I want to be able to scale to any sizes
@@ -43,6 +60,12 @@ def shift3(oldindexlist):
     newindexlist = oldindexlist[3:].copy()
     for k in range(3):
         newindexlist.append(oldindexlist[k])
+    return newindexlist
+
+def reverseshift3(oldindexlist):
+    newindexlist = oldindexlist[:9].copy()
+    for k in range(1, 4):
+        newindexlist.insert(0, oldindexlist[-k])
     return newindexlist
 
 
@@ -177,23 +200,51 @@ class Cube():
         for newtileindex, oldtile in zip(newtileindices, oldtiles):
             self.cube[newtileindex] = oldtile
     
+    def rotatesidecounterclockwise(self, side):
+        oldtileindices = [side*8 + n for n in range(8)]
+        oldtiles = [self.cube[ind] for ind in oldtileindices]
+        newtileindices = oldtileindices[:6].copy()
+        for k in range(1, 3):
+            newtileindices.insert(0, oldtileindices[-k])
+        for newtileindex, oldtile in zip(newtileindices, oldtiles):
+            self.cube[newtileindex] = oldtile
+    
     def standardpermute(self, oldtileindices):
         oldtiles = [self.cube[ind] for ind in oldtileindices]
         newtileindices = shift3(oldtileindices)
         for newtileindex, oldtile in zip(newtileindices, oldtiles):
             self.cube[newtileindex] = oldtile
-
-    def rotatesidecounterclockwise(self, side):
-        for _ in range(3):
-            self.rotatesideclockwise(side)
+    
+    def reversepermute(self, oldtileindices):
+        oldtiles = [self.cube[ind] for ind in oldtileindices]
+        newtileindices = reverseshift3(oldtileindices)
+        for newtileindex, oldtile in zip(newtileindices, oldtiles):
+            self.cube[newtileindex] = oldtile
 
     def R(self):
         self.rotatesideclockwise(3)
-        self.standardpermute([4, 3, 2, 20, 19, 18, 44, 43, 42, 32, 39, 38])
+        self.standardpermute(slices["X"][2])
+    
+    def Ri(self):
+        self.rotatesidecounterclockwise(3)
+        self.reversepermute(slices["X"][2])
+    
+    def U(self):
+        self.rotatesideclockwise(5)
+        self.standardpermute(slices["Y"][0])
+
+    def Ui(self):
+        self.rotatesidecounterclockwise(5)
+        self.reversepermute(slices["Y"][0])
 
 cube = Cube()
 
-cube.R()
+for _ in range(6):
+    cube.R()
+    cube.U()
+    cube.Ri()
+    cube.Ui()
+    
 cube.tkinterdraw()
 
 window.mainloop()
