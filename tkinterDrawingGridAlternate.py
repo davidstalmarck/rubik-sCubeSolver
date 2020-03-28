@@ -35,7 +35,7 @@ initialcube = [ 'W0', 'W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'B0', 'B1', 'B2'
 slices = {
     "X" : [
          [6, 7, 0, 22, 23, 16, 46, 47, 40, 34, 35, 36],
-         [5, 48, 1, 21, 50, 17, 45, 51, 41, 33, 52, 37],
+         [5, 48, 1, 21, 50, 17, 45, 53, 41, 33, 52, 37],
          [4, 3, 2, 20, 19, 18, 44, 43, 42, 32, 39, 38]
          ],
     "Y" : [
@@ -45,7 +45,7 @@ slices = {
          ],
     "Z" : [
          [2, 1, 0, 12, 11, 10, 46, 45, 44, 24, 31, 30],
-         [3, 48, 7, 13, 49, 15, 47, 53, 43, 25, 51, 29],
+         [3, 48, 7, 13, 49, 9, 47, 53, 43, 25, 51, 29],
          [4, 5, 6, 14, 15, 8, 40, 41, 42, 26, 27, 28]
          ]
 }
@@ -222,7 +222,7 @@ class Cube():
         for newtileindex, oldtile in zip(newtileindices, oldtiles):
             self.cube[newtileindex] = oldtile
 
-    # standard rotations
+    # standard (face) rotations
 
     def R(self):
         self.rotatesideclockwise(3)
@@ -232,11 +232,11 @@ class Cube():
         self.rotatesidecounterclockwise(3)
         self.reversepermute(slices["X"][2])
 
-    def L(self):
+    def Li(self):
         self.rotatesideclockwise(1)
         self.standardpermute(slices["X"][0])
     
-    def Li(self):
+    def L(self):
         self.rotatesidecounterclockwise(1)
         self.reversepermute(slices["X"][0])
 
@@ -264,15 +264,46 @@ class Cube():
         self.rotatesidecounterclockwise(2)
         self.reversepermute(slices["Z"][0])
     
-    def B(self):
+    def Bi(self):
         self.rotatesideclockwise(4)
         self.standardpermute(slices["Z"][2])
     
-    def Bi(self):
+    def B(self):
         self.rotatesidecounterclockwise(4)
         self.reversepermute(slices["Z"][2])
+    
+    # slice turns
+    def M(self):
+        self.reversepermute(slices["X"][1])
+
+    def Mi(self):
+        self.standardpermute(slices["X"][1])
+    
+    def E(self):
+        self.reversepermute(slices["Y"][1])
+    
+    def Ei(self):
+        self.standardpermute(slices["Y"][1])
+    
+    def S(self):
+        self.standardpermute(slices["Z"][1])
+
+    def Si(self):
+        self.reversepermute(slices["Z"][1])
+
+    # whole cube rotations
+    # TODO
+    # dvs flytta face 0->4->5->2->0 och v.v. runt x
+    #  -""- 1->2->3->4->1 och v.v. runt y
+    #  -##- 0->3->5->1->0 och v.v. runt z
 
 cube = Cube()
+cube.M()
+cube.M()
+cube.E()
+cube.E()
+cube.S()
+cube.S()
 
 # for _ in range(6):
 #     cube.R()
