@@ -1,8 +1,6 @@
 import random
 from tkinter import Label, Tk, mainloop
 
-window = Tk()
-
 colourmap = {
     "W" : "Grey",
     "B" : "Blue",
@@ -11,6 +9,7 @@ colourmap = {
     "O" : "Orange",
     "Y" : "Yellow"
 }
+window = Tk()
 
 def getcolour(tilestring):
     colour = tilestring[0]
@@ -297,13 +296,15 @@ class Cube():
     #  -""- 1->2->3->4->1 och v.v. runt y
     #  -##- 0->3->5->1->0 och v.v. runt z
 
-cube = Cube()
-cube.M()
-cube.M()
-cube.E()
-cube.E()
-cube.S()
-cube.S()
+# window = Tk()
+
+# cube = Cube()
+# cube.M()
+# cube.M()
+# cube.E()
+# cube.E()
+# cube.S()
+# cube.S()
 
 # for _ in range(6):
 #     cube.R()
@@ -311,6 +312,20 @@ cube.S()
 #     cube.Ri()
 #     cube.Ui()
 
-cube.tkinterdraw()
+# cube.tkinterdraw()
 
-window.mainloop()
+# window.mainloop()
+
+cube = Cube()
+
+def makeamove(move, tkinstance):
+    move.__call__()
+    cube.tkinterdraw()
+    tkinstance.mainloop()
+    return Tk()
+
+while True:
+    window = makeamove(cube.R, window)
+    window = makeamove(cube.U, window)
+    window = makeamove(cube.Ri, window)
+    window = makeamove(cube.Ui, window)
