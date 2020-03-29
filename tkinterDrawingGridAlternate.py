@@ -296,26 +296,6 @@ class Cube():
     #  -""- 1->2->3->4->1 och v.v. runt y
     #  -##- 0->3->5->1->0 och v.v. runt z
 
-# window = Tk()
-
-# cube = Cube()
-# cube.M()
-# cube.M()
-# cube.E()
-# cube.E()
-# cube.S()
-# cube.S()
-
-# for _ in range(6):
-#     cube.R()
-#     cube.U()
-#     cube.Ri()
-#     cube.Ui()
-
-# cube.tkinterdraw()
-
-# window.mainloop()
-
 cube = Cube()
 
 def makeamove(move, tkinstance):
